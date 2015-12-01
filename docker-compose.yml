@@ -1,5 +1,5 @@
 swagger:
-  build: swagger_ui
+  build: swaggerui
   ports:
     - "8080:8080"
   links:
