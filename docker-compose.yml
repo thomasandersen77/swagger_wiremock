@@ -1,0 +1,13 @@
+swagger:
+  build: swagger_ui
+  ports:
+    - "8080:8080"
+  links:
+    - wiremock
+
+wiremock:
+  build: wiremock
+  ports: 
+    - "80:80"
+ 
+
