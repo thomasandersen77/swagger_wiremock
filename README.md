@@ -1,6 +1,7 @@
 # swagger_wiremock
 
 First generate a swagger.json file for your JaxRs project with this Maven plugin:
+
             <plugin>
                 <groupId>com.sebastian-daschner</groupId>
                 <artifactId>jaxrs-analyzer-maven-plugin</artifactId>
@@ -17,6 +18,7 @@ First generate a swagger.json file for your JaxRs project with this Maven plugin
                     </execution>
                 </executions>
             </plugin>
+
 
 Find the swagger.json file inside target and replace the empty swagger.json file under wiremock/json/
 
