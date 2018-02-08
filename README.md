@@ -24,4 +24,6 @@ Find the swagger.json file inside target and replace the empty swagger.json file
 
 To build and run:  docker-compose build && docker-compose up
 
-View your API :)
+View your API with SwaggerUI
+
+TODO: post new swagger.json files for other API´s
