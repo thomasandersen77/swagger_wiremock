@@ -1,0 +1,119 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "version": "0.0.1-SNAPSHOT",
+    "title": "restTemplate-kotlin"
+  },
+  "host": "localhost",
+  "basePath": "/",
+  "schemes": [
+    "http"
+  ],
+  "paths": {
+    "/person": {
+      "get": {
+        "consumes": [],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "headers": {},
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/NestedType"
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [],
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/Person"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "headers": {},
+            "schema": {
+              "$ref": "#/definitions/Person"
+            }
+          }
+        }
+      }
+    },
+    "/person/{_id}": {
+      "get": {
+        "consumes": [],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "_id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "headers": {},
+            "schema": {
+              "$ref": "#/definitions/Person"
+            }
+          }
+        }
+      }
+    }
+  },
+  "definitions": {
+    "NestedType": {
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "firstname": {
+          "type": "string"
+        },
+        "lastname": {
+          "type": "string"
+        },
+        "birthdate": {
+          "type": "string"
+        }
+      }
+    },
+    "Person": {
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "firstname": {
+          "type": "string"
+        },
+        "lastname": {
+          "type": "string"
+        },
+        "birthdate": {
+          "type": "string"
+        }
+      }
+    }
+  }
+}
